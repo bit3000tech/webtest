@@ -3,7 +3,7 @@
 require APPPATH . '/libraries/REST_Controller.php';
 use Restserver\Libraries\REST_Controller;
 
-class item extends REST_Controller
+class Item extends REST_Controller
 {
     public function index_get()
     {

@@ -21,7 +21,6 @@
 		 	}
 		 	else
 		 	{
-		 	var_dump($ubicacion);
 		 ?>
 
 				var centro = {lat: <?php echo $ubicacion->latitud ?>, lng: <?php echo $ubicacion->longitud ?>;

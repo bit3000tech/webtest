@@ -21,6 +21,6 @@ class Ubicacion extends REST_Controller
         $this->ubicacion->longitud = $obj->longitud;
         $this->ubicacion->fecha = $obj->fecha;
         $this->ubicacion->guardar();
-        $this->response($this->item, 201);
+        $this->response($this->ubicacion, 201);
     }
 }

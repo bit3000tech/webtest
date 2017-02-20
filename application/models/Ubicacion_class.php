@@ -26,7 +26,7 @@ class Ubicacion_class extends CI_Model {
         if(!isset($this->id) || $this->id == NULL)
         {
             unset($this->id);
-            $this->db->query($this->db->insert_string('item', (array)$this));
+            $this->db->query($this->db->insert_string('ubicacion', (array)$this));
             $this->id = $this->db->insert_id();
         }
         else
@@ -34,7 +34,7 @@ class Ubicacion_class extends CI_Model {
             $id = $this->id;
             unset($this->id);
             $where = "id = ".$id;
-            $this->db->query($this->db->update_string('item', (array)$this, $where));
+            $this->db->query($this->db->update_string('ubicacion', (array)$this, $where));
             $this->id = $id;
         }
     }

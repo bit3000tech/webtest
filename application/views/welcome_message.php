@@ -12,25 +12,27 @@
 
 	var map;
 	function initMap() {
-		<?
+		<?php
 			if($ubicacion == null)
 		 	{
 		 ?>
 		 		var centro = {lat: -1.6983978, lng: -78.5375932};
-		 <?
+		 <?php
 		 	}
 		 	else
 		 	{
+		 	var_dump($ubicacion);
 		 ?>
-				var centro = {lat: $ubicacion->latitud, lng: $ubicacion->longitud};
-		<?
+
+				var centro = {lat: <?php echo $ubicacion->latitud ?>, lng: <?php echo $ubicacion->longitud ?>;
+		<?php
 			}
 		?>
 
 
 		map = new google.maps.Map(document.getElementById('map'),
 		{
-			center: {lat: -1.6983978, lng: -78.5375932},
+			center: centro,
 			zoom: 8
 		});
 	}

@@ -58,11 +58,11 @@ class Ubicacion_class extends CI_Model {
         return $query->result();
     }
 
-    function getLast()
+    public function getLast()
     {
-        $sql="select * from ubicacion order by id desc limit 1";
-        $query= $this->db->query($sql);
-        return $query->result();
+        $query = $this->db->query("select * from ubicacion order by id desc limit 1");
+        $datos = $query->result();
+        $this->initialize($datos[0]);
     }
 }
 ?>

@@ -23,7 +23,7 @@
 		 	{
 		 ?>
 
-				var centro = {lat: <?php echo $ubicacion->latitud ?>, lng: <?php echo $ubicacion->longitud ?>;
+				var centro = {lat: <?php echo $ubicacion->latitud ?>, lng: <?php echo $ubicacion->longitud ?>};
 		<?php
 			}
 		?>
